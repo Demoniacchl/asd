@@ -1,20 +1,19 @@
 <?php
+
 session_start();
+
 set_time_limit(10000000);
-//error_reporting(E_ALL);
 
-//ini_set('display_errors', '1');
-
-require("inc/config.php");
-
-//require("inc/querys.php");
+require_once inc/config.php;
 
 $nivel = $_SESSION["pfl_user"];
 
 $regionsession = $_SESSION["region"];
 
 $usuario=$_SESSION["nom_user"];
+
 $objDTEWs = null;
+
 $consultarFechaRecepcionSii= null;
 
 $APRO_COD = 'CNT'; //C�digo del programa en la tabla aprobacion_nivel
@@ -23,8 +22,11 @@ $APRO_NIVEL = 1;   //Nivel de autorizaci�n de este programa en la tabla aproba
 //$APRO_ESTADO = $row[0];
 
 $arrayFiscalias = array();
+
 $sqlFiscalias = "SELECT * FROM regiones WHERE activo = 1";
+
 $resFiscalias = mysql_query($sqlFiscalias);
+
 while($rowFiscalias = mysql_fetch_array($resFiscalias))
 {
   $arrayFiscalias[] = $rowFiscalias;
@@ -35,11 +37,13 @@ if($_SESSION["nom_user"] =="" ){
 	?><script language="javascript">location.href='sesion_perdida.php';</script><?
 }
 $date_in=date("d-m-Y");
+
 $read1= rand(0,1000000);
-//$read2= rand(0,1000000);
-//$read3= rand(0,1000000);
+
 $read4= rand(0,1000000);
+
 require_once($_SERVER["DOCUMENT_ROOT"]."/SII/includes/inc/class.dtews.php"); 
+
 $objDTEWs = new dteWS();
 
 $arrayDocumentos = ["f" => 33,"fa" => 34,"n" => 61,"d" => 56];
@@ -185,7 +189,7 @@ function abreVentana3(id,numerooc,id2,swb){
       </div>
       <div class="col-sm-9 col-lg-9">
         <div class="dash-unit2">
-          <table border="0"  >
+          <table border="0" >
             <tr>
               <th colspan="2" scope="col"><span class="Estilo7"><?= utf8_decode('DERIVACIÓN A V°B°') ?></span></th>
             </tr>
