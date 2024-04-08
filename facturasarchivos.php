@@ -1,7 +1,8 @@
-<?
+<?php
 session_start();
 set_time_limit(10000000);
 //error_reporting(E_ALL);
+
 //ini_set('display_errors', '1');
 
 require("inc/config.php");
@@ -38,8 +39,7 @@ $read1= rand(0,1000000);
 //$read2= rand(0,1000000);
 //$read3= rand(0,1000000);
 $read4= rand(0,1000000);
-
-require_once($_SERVER["DOCUMENT_ROOT"]."/SII/includes/inc/class.dtews.php");
+re quire_once($_SERVER["DOCUMENT_ROOT"]."/SII/includes/inc/class.dtews.php"); 
 $objDTEWs = new dteWS();
 
 $arrayDocumentos = ["f" => 33,"fa" => 34,"n" => 61,"d" => 56];
