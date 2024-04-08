@@ -39,7 +39,7 @@ $read1= rand(0,1000000);
 //$read2= rand(0,1000000);
 //$read3= rand(0,1000000);
 $read4= rand(0,1000000);
-re quire_once($_SERVER["DOCUMENT_ROOT"]."/SII/includes/inc/class.dtews.php"); 
+require_once($_SERVER["DOCUMENT_ROOT"]."/SII/includes/inc/class.dtews.php"); 
 $objDTEWs = new dteWS();
 
 $arrayDocumentos = ["f" => 33,"fa" => 34,"n" => 61,"d" => 56];
