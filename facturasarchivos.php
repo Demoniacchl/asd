@@ -45,8 +45,10 @@ $objDTEWs = new dteWS();
 $arrayDocumentos = ["f" => 33,"fa" => 34,"n" => 61,"d" => 56];
 
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="e">
 <head>
+  <meta content="text/html; charset=utf-8" />
   <title>Facturas y/o Boletas</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   <link href="css/estilos.css" rel="stylesheet" type="text/css">
@@ -128,7 +130,7 @@ $arrayDocumentos = ["f" => 33,"fa" => 34,"n" => 61,"d" => 56];
      <link rel="stylesheet" type="text/css" href="librerias/css/steel/steel.css" />
      <!-- boottrap -->
      <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"></script>
+     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
      <!-- end  bootsrap -->
      <script type="text/javascript">
       function verAsociadas(proye) {
@@ -183,12 +185,13 @@ function abreVentana3(id,numerooc,id2,swb){
       </div>
       <div class="col-sm-9 col-lg-9">
         <div class="dash-unit2">
-          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <table border="0"  >
             <tr>
-              <td height="20" colspan="2"><span class="Estilo7"><?= utf8_decode('DERIVACIÓN A V°B°') ?></span></td>
+              <th colspan="2" scope="col"><span class="Estilo7"><?= utf8_decode('DERIVACIÓN A V°B°') ?></span></th>
             </tr>
             <tr>
-             <td><hr></td><td><hr></td>
+             <td><hr></td>
+             <td><hr></td>
            </tr>
 
            <?
